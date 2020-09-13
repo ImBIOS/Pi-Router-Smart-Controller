@@ -39,7 +39,9 @@ while True: #Loop in here forever
             relay_on(channel)
             restart_ops += 1
             print "done restarting for" + restart_ops + "times"
+        else:
+            print "Restart Ops is executed and not solving anything"
  
     GPIO.cleanup()
-    sleep(5) #Wait a time period then do again
+    sleep(5) #Wait a 5 second then do again
 
