@@ -4,7 +4,7 @@ import os
 import RPi.GPIO as GPIO
 from time import sleep
 
-ip_address = "192.168.102.1"
+main_router = "192.168.102.1"
 channel = 21
 relay_mode = 1
 restart_ops = 0
