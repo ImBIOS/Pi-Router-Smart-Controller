@@ -23,15 +23,15 @@ def relay_off(pin):
 
 while True: #Loop in here forever
  
-    response = os.system ("ping -c 1 " + ip_address) #Ping the define IP address
+    response = os.system ("ping -c 1 " + main_router) #Ping the define IP address
  
     if response == 0: #Healthy repsonse is 0
-        print ip_address, 'is up'
+        print main_router, 'is up'
         if relay_mode == 0:
             relay_on(channel)
  
     else:
-        print ip_address, 'is down'
+        print main_router, 'is down'
         if restart_ops <= 5:
             print "restart executed"
             relay_off(channel)
