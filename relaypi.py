@@ -1,4 +1,3 @@
-# Ensure postive leads are hooked up to NO and C terminals
 import sys
 import os
 import RPi.GPIO as GPIO
