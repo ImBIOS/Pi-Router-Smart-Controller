@@ -24,11 +24,11 @@ while True: #Loop in here forever
     response = os.system ("ping -c 1 " + ip_address) #Ping the define IP address
  
     if response == 0: #Healthy repsonse is 0
-        print (ip_address, 'is up')
+        print ip_address, 'is up'
         relay_on(channel)
  
     else:
-        print (ip_address, 'is down')
+        print ip_address, 'is down'
         relay_off(channel)
  
     GPIO.cleanup()
