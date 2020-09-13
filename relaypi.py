@@ -7,6 +7,7 @@ from time import sleep
 ip_address = "192.168.102.1"
 channel = 21
 relay_mode = 1
+restart_ops = 0
 
 GPIO.setmode(GPIO.BCM) # GPIO setup
 GPIO.setup(channel, GPIO.OUT)
@@ -31,7 +32,13 @@ while True: #Loop in here forever
  
     else:
         print ip_address, 'is down'
-        relay_off(channel)
+        if restart_ops <= 5:
+            print "restart executed"
+            relay_off(channel)
+            sleep(30)
+            relay_on(channel)
+            restart_ops += 1
+            print "done restarting for" + restart_ops + "times"
  
     GPIO.cleanup()
     sleep(5) #Wait a time period then do again
