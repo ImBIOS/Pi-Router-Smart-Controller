@@ -26,21 +26,21 @@ while True: #Loop in here forever
     response = os.system ("ping -c 1 " + main_router) #Ping the define IP address
  
     if response == 0: #Healthy repsonse is 0
-        print main_router, 'is up'
+        print (main_router, 'is up')
         if relay_mode == 0:
             relay_on(channel)
  
     else:
-        print main_router, 'is down'
+        print (main_router, 'is down')
         if restart_ops <= 5:
-            print "restart executed"
+            print ("restart executed")
             relay_off(channel)
             sleep(30)
             relay_on(channel)
             restart_ops += 1
-            print "done restarting for", restart_ops, "times"
+            print ("done restarting for", restart_ops, "times")
         else:
-            print "Restart Ops is executed and not solving anything"
+            print ("Restart Ops is executed and not solving anything")
  
     GPIO.cleanup()
     sleep(5) #Wait a 5 second then do again
