@@ -8,7 +8,6 @@ logs folder is folder to store error logs.
 
 I use this tutorial to run this script in startup:
 https://www.instructables.com/id/Raspberry-Pi-Launch-Python-script-on-startup/
+https://www.tomshardware.com/how-to/run-script-at-boot-raspberry-pi
 
-sudo crontab -e
-Now, enter the line:
-@reboot sh /home/pi/bbt/launcher.sh >/home/pi/logs/cronlog 2>&1
+Not using a crontab anymore, but files.desktop instead to make it GUI.
