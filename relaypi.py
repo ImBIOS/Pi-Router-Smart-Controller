@@ -3,7 +3,7 @@ import os
 import RPi.GPIO as GPIO
 from time import sleep
 
-main_router = "192.168.102.1"
+main_router = "XXX.XXX.XXX.XXX" #define the main router
 channel = 21
 relay_mode = 1
 restart_ops = 0
